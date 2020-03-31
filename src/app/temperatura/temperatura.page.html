@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Temeperatura</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="thermometer-sharp" slot="start" class="icon"></ion-icon>
+      <ion-label class="tem">Temperatura</ion-label>
+    </ion-item>
+  
+    <ion-card-content>
+      <h1 class="t">{{temperatura}}</h1>
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-label>Recibir Notificaciones</ion-label>
+      <ion-select placeholder = "Select" id="users" name="users" #users= ngModel [(ngModel)]="data.users">
+        <ion-select-option value="All">Si</ion-select-option>
+        <ion-select-option value="Inactive User">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-label style="text-align: center;">Recibir Notificacion Cuando</ion-label>
+    <ion-item>
+      <ion-range min="0" max="100" color="danger" pin="true" id="temp"  #temp="ngModel" [(ngModel)]="tem.temp">
+        <ion-icon style="color: #c93535;" size="small" slot="start" name="thermometer-sharp"></ion-icon>
+        <ion-icon style="color: #c93535;" slot="end" name="thermometer-sharp"></ion-icon>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+  <ion-button class="btn btn-info" (click)="enviarNotificaciones(data)">Enviar</ion-button>
+</ion-content>

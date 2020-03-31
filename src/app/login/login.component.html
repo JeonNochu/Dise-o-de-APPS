@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="text-align: center;">Inicia Sesión con Facebook</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button  style="background-color: #3b5998; border: 1px  #3b5998;"  expand="full"  (click)="this.authService.facebook()">
+        <ion-icon style="margin-right: 15px;" name="logo-facebook"></ion-icon>Inicia Sesión con Facebook</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
